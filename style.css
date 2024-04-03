@@ -359,3 +359,8 @@ body {
   font-family: "Jost", sans-serif;
   transition: 0.3s;
 }
+
+.contact-me a {
+  color: #fff;
+  text-decoration: none;
+}
