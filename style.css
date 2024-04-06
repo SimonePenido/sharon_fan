@@ -379,6 +379,7 @@ body {
 @media only screen and (max-width: 600px) {
   .card {
     max-width: 130%; /* Definir uma largura máxima maior */
+    max-height: 130%;
     margin: auto; /* Centralizar o card na tela */
   }
 }
