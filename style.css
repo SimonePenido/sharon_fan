@@ -379,7 +379,7 @@ body {
 /* Estilos para telas pequenas */
 @media only screen and (max-width: 600px) {
   .card {
-    max-width: 90vh; /* Definir uma largura máxima maior */
+    max-width: 100%; /* Definir uma largura máxima maior */
     max-height: 100%;
     margin: auto; /* Centralizar o card na tela */
   }
