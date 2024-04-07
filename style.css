@@ -34,25 +34,25 @@ body {
 }
 
 .card[data-state="#about"] {
-  height: 30em;
+  height: 60em;
 }
 .card[data-state="#about"] .card-main {
   padding-top: 0;
 }
 
 .card[data-state="#contact"] {
-  height: 30em;
+  height: 50em;
 }
 
 .card[data-state="#experience"] {
-  height: 30em;
+  height: 60em;
 }
 
 .card.is-active .card-header {
-  height: 80px;
+  height: 40em;
 }
 .card.is-active .card-cover {
-  height: 100px;
+  height: 40em;
   top: -50px;
 }
 .card.is-active .card-avatar {
