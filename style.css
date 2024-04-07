@@ -18,7 +18,7 @@ body {
 }
 
 .card {
-  max-width: 50em;
+  max-width: 70vh;
   margin: auto;
   overflow-y: auto;
   position: relative;
@@ -378,8 +378,8 @@ body {
 /* Estilos para telas pequenas */
 @media only screen and (max-width: 600px) {
   .card {
-    max-width: 130%; /* Definir uma largura máxima maior */
-    max-height: 130%;
+    max-width: 70vh; /* Definir uma largura máxima maior */
+    max-height: 100%;
     margin: auto; /* Centralizar o card na tela */
   }
 }
@@ -395,7 +395,7 @@ body {
 /* Estilos para telas grandes */
 @media only screen and (min-width: 1025px) {
   .card {
-    max-width: 50em; /* Mantém a largura máxima original para telas grandes */
+    max-width: 70vh; /* Mantém a largura máxima original para telas grandes */
   }
 }
 
@@ -409,6 +409,6 @@ body {
 /* Estilos para telas grandes */
 @media only screen and (min-width: 1025px) {
   .card {
-    max-width: 50em; /* Mantém a largura máxima original para telas grandes */
+    max-width: 70vh; /* Mantém a largura máxima original para telas grandes */
   }
 }
