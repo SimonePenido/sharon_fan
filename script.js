@@ -1,110 +1,55 @@
-const images = document.querySelectorAll('.galeria-container img');
-let currentImageIndex;
 
+const images = document.querySelectorAll('.galeria-container img');
+let currentImageIndex = 0;
+
+// Função para abrir a imagem em tela cheia
 function openImageInFullscreen(index) {
-    const imageUrl = images[index].src;
+    currentImageIndex = index; // Armazena o índice atual
     const overlay = document.createElement('div');
     overlay.id = 'overlay';
 
+    // Cria a imagem em tela cheia
     const image = document.createElement('img');
-    image.src = imageUrl;
+    image.src = images[currentImageIndex].src;
     image.classList.add('fullscreen');
 
+    // Botão anterior
     const prevButton = document.createElement('button');
     prevButton.textContent = '◄';
     prevButton.classList.add('prev');
-    prevButton.onclick = () => changeImage(index - 1);
+    prevButton.onclick = (event) => {
+        event.stopPropagation(); // Impede o clique no overlay de fechar a imagem
+        changeImage(currentImageIndex - 1);
+    };
 
+    // Botão próximo
     const nextButton = document.createElement('button');
     nextButton.textContent = '►';
     nextButton.classList.add('next');
-    nextButton.onclick = () => changeImage(index + 1);
+    nextButton.onclick = (event) => {
+        event.stopPropagation(); // Impede o clique no overlay de fechar a imagem
+        changeImage(currentImageIndex + 1);
+    };
 
+    // Adiciona os elementos ao overlay
     overlay.appendChild(prevButton);
     overlay.appendChild(image);
     overlay.appendChild(nextButton);
     document.body.appendChild(overlay);
 
+    // Fecha o overlay ao clicar fora da imagem
     overlay.onclick = () => document.body.removeChild(overlay);
-    currentImageIndex = index;
 }
 
+// Função para mudar de imagem
 function changeImage(newIndex) {
     if (newIndex < 0) {
-        newIndex = images.length - 1;
+        newIndex = images.length - 1; // Volta para a última imagem se estiver na primeira
     } else if (newIndex >= images.length) {
-        newIndex = 0;
+        newIndex = 0; // Volta para a primeira imagem se estiver na última
     }
 
-    const overlay = document.getElementById('overlay');
-    const image = overlay.querySelector('img');
-    image.src = images[newIndex].src;
-    currentImageIndex = newIndex;
-}
-
-images.forEach((img, index) => {
-    img.addEventListener('click', () => openImageInFullscreen(index));
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const images = document.querySelectorAll('.image-gallery img');
-    let currentImageIndex = 0;
-
-    // Cria o container para a visualização em tela cheia
-    const fullScreenContainer = document.createElement('div');
-    fullScreenContainer.classList.add('fullscreen');
-    document.body.appendChild(fullScreenContainer);
-
-    const fullScreenImage = document.createElement('img');
-    fullScreenContainer.appendChild(fullScreenImage);
-
-    const prevButton = document.createElement('button');
-    prevButton.textContent = '⟨';
-    prevButton.classList.add('prev');
-    fullScreenContainer.appendChild(prevButton);
-
-    const nextButton = document.createElement('button');
-    nextButton.textContent = '⟩';
-    nextButton.classList.add('next');
-    fullScreenContainer.appendChild(nextButton);
-
-    const closeButton = document.createElement('button');
-    closeButton.textContent = '✖';
-    closeButton.classList.add('close');
-    fullScreenContainer.appendChild(closeButton);
-
-    // Função para exibir a imagem em tela cheia
-    function showImage(index) {
-        currentImageIndex = index;
-        fullScreenImage.src = images[currentImageIndex].src;
-        fullScreenContainer.style.display = 'flex';
-    }
-
-    // Função para fechar a visualização em tela cheia
-    function closeFullScreen() {
-        fullScreenContainer.style.display = 'none';
-    }
-
-    // Eventos para abrir a imagem em tela cheia ao clicar
-    images.forEach((image, index) => {
-        image.addEventListener('click', () => {
-            showImage(index);
-        });
-    });
-
-    // Botão de fechar
-    closeButton.addEventListener('click', closeFullScreen);
-
-    // Botão "Anterior"
-    prevButton.addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : images.length - 1;
-        showImage(currentImageIndex);
-    });
-
-    // Botão "Próximo"
-    nextButton.addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex < images.length - 1) ? currentImageIndex + 1 : 0;
-        showImage(currentImageIndex);
-    });
-});
+    // Atualiza a imagem no overlay
+    const overlayImage = document.querySelector('#overlay img');
+    if (overlayImage) {
+        overlayImage.src = images
