@@ -1,4 +1,4 @@
-
+// Seleciona todas as imagens da galeria
 const images = document.querySelectorAll('.galeria-container img');
 let currentImageIndex = 0;
 
@@ -52,4 +52,12 @@ function changeImage(newIndex) {
     // Atualiza a imagem no overlay
     const overlayImage = document.querySelector('#overlay img');
     if (overlayImage) {
-        overlayImage.src = images
+        overlayImage.src = images[newIndex].src;
+        currentImageIndex = newIndex; // Atualiza o índice atual
+    }
+}
+
+// Adiciona o evento de clique a todas as imagens
+images.forEach((img, index) => {
+    img.addEventListener('click', () => openImageInFullscreen(index));
+});
