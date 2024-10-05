@@ -1,283 +1,174 @@
+/* Reset de margens e preenchimentos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos gerais da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
 }
 
+/* Estilo do container principal */
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
+/* Estilo do cabeçalho */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 header p {
     font-size: 1.2rem;
-    margin-top: 10px;
 }
 
-.intro img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-section {
-    margin: 40px 0;
-}
-
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-section p {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.image-gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.image-gallery img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.1);
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsividade para telas pequenas (smartphones) */
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    section p {
-        font-size: 1rem;
-    }
-
-    .image-gallery {
-        display: block;
-        text-align: center;
-    }
-
-    .image-gallery img {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Responsividade para telas médias (tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .container {
-        width: 90%;
-    }
-
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    header p {
-        font-size: 1.1rem;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
-    }
-
-    section p {
-        font-size: 1.05rem;
-    }
-
-    .image-gallery {
-        justify-content: space-between;
-    }
-
-    .image-gallery img {
-        max-width: 45%;
-    }
-}
-
-/* Responsividade para telas grandes (computadores) */
-@media (min-width: 1025px) {
-    .container {
-        width: 80%;
-    }
-
-    header h1 {
-        font-size: 3rem;
-    }
-
-    header p {
-        font-size: 1.2rem;
-    }
-
-    section h2 {
-        font-size: 2rem;
-    }
-
-    section p {
-        font-size: 1.1rem;
-    }
-
-    .image-gallery {
-        justify-content: space-between;
-    }
-
-    .image-gallery img {
-        max-width: 30%;
-    }
-}
-
-/* Estilos para a visualização em tela cheia */
-.fullscreen {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 9999;
-}
-
-.fullscreen img {
-    max-width: 80%;
-    max-height: 80%;
-}
-
-.fullscreen button {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.fullscreen button:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
-.fullscreen .prev {
-    left: 10px;
-}
-
-.fullscreen .next {
-    right: 10px;
-}
-
-.fullscreen .close {
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-#galeria {
-    padding: 20px;
-}
-
+/* Estilo da galeria de imagens */
 .galeria-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-top: 20px;
 }
 
 .galeria-container img {
     width: 100%;
     height: auto;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
+.galeria-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer estilizado */
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
+    margin-top: 30px;
 }
 
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
+footer p {
+    font-size: 1rem;
+    margin: 0;
 }
 
-footer a:hover {
-    color: #ffcc00;
+/* Overlay de tela cheia */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
+#overlay img.fullscreen {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Estiliza os botões de navegação em tela cheia */
+#overlay button {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#overlay button.prev {
+    left: 10px;
+}
+
+#overlay button.next {
+    right: 10px;
+}
+
+#overlay button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Media Queries para responsividade */
+
+/* Para dispositivos menores (smartphones) */
 @media (max-width: 768px) {
     .galeria-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
     }
 }
 
-@media (max-width: 480px) {
+/* Para dispositivos médios (tablets) */
+@media (max-width: 1024px) {
     .galeria-container {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Para dispositivos grandes (desktops) */
+@media (min-width: 1025px) {
+    .galeria-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
     }
 }
