@@ -5,7 +5,7 @@
 ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 ![Responsive](https://img.shields.io/badge/Responsivo-Design-239B56.svg?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Concluído-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Em_Andamento-brightgreen?style=for-the-badge)
 
 > **Um site tributo para Sharon den Adel**, vocalista da banda de metal sinfônico **Within Temptation**. Este site destaca sua carreira, música e inclui uma galeria de imagens visualmente atraente com funcionalidade de tela cheia! 🎶🔥
 
