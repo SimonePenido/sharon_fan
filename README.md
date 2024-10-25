@@ -14,7 +14,7 @@
 - **Design responsivo**: Funciona perfeitamente em todos os dispositivos (mobile, tablet, desktop) 📱💻
 - **Galeria interativa**: Clique nas imagens para vê-las em tela cheia com setas de navegação ⬅️➡️
 - **Layout moderno**: Inspirado em designs minimalistas e elegantes ✨
-- **Otimizado para recrutadores**: Projeto atraente com código limpo e de fácil manutenção 🎯
+
 
 ## 🚀 Tecnologias Utilizadas
 
