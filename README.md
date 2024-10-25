@@ -1,5 +1,5 @@
 
-# 🎤 Sharon den Adel - Site Tributo 🌟
+# 🎤 Sharon den Adel Fan 🌟
 
 ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -62,7 +62,7 @@ Media Queries: Criar um layout totalmente responsivo para diferentes tamanhos de
 ## 🌟 Demo ao Vivo
 
 Confira a demo ao vivo aqui 🚀
-# GitHubPages: (https://simonepenido.github.io/sharon_fan/)
+### GitHubPages: (https://simonepenido.github.io/sharon_fan/)
 
 ## 📝 Licença
 
