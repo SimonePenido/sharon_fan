@@ -62,7 +62,7 @@ Media Queries: Criar um layout totalmente responsivo para diferentes tamanhos de
 ## 🌟 Demo ao Vivo
 
 Confira a demo ao vivo aqui 🚀
-![GitHubPages](https://simonepenido.github.io/sharon_fan/)
+# GitHubPages: (https://simonepenido.github.io/sharon_fan/)
 
 ## 📝 Licença
 
