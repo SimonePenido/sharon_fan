@@ -14,29 +14,99 @@ body {
     margin: 0;
 }
 
+
+
 /* Estilo do container principal */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 /* Estilo do cabeçalho */
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+.hero {
+    background-image: url(images/banner.jpg);
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1px;
+}
+
+.hero-content {
+    margin: 200px auto 0;
+    width: 80%;
     text-align: center;
+    color: white;
+    letter-spacing: .7em;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.hero-content h1 {
+    font-size: 56px;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    margin-bottom: 0;
 }
 
-header p {
-    font-size: 1.2rem;
+.hero nav ul {
+    margin: 20px 80px 0 0;
+    text-align: right;
+}
+
+.hero nav li {
+    display: inline-block;
+    list-style-type: none;
+    border: 1px solid white;
+    margin-left: 16px;
+}
+
+.hero nav a {
+    background-color: rgba(0, 0, 0, .3);
+    padding: 16px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero nav a:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+h2{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    background-color: #333333ec;
+    color: #fff;
+}
+
+p{
+    text-align: justify;
+    margin-top: 2em;
+    font-size: 1rem;
+
+}
+
+.imageminicio {
+    width: 100%;
+    height: auto;
+    padding: 1.5em;
+    margin: auto;
+}
+
+.video {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+.video iframe {
+    width: 100%;
+    height: 300px;
 }
 
 /* Estilo da galeria de imagens */
@@ -58,6 +128,17 @@ header p {
     transform: scale(1.05);
 }
 
+.div_icons{
+    display: flex;
+    justify-content: center;
+}
+
+.div_icons img{
+    align-items: center;
+    padding: 1rem;
+    width: 4rem;
+}
+
 /* Footer estilizado */
 footer {
     background-color: #333;
@@ -70,6 +151,7 @@ footer {
 footer p {
     font-size: 1rem;
     margin: 0;
+    text-align: center;
 }
 
 /* Overlay de tela cheia */
