@@ -239,6 +239,10 @@ footer a {
     footer p {
         font-size: 0.9rem;
     }
+
+    .video {
+        display: block;
+    }
 }
 
 /* Para dispositivos médios (tablets) */
