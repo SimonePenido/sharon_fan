@@ -267,8 +267,14 @@ footer a {
         font-size: 0.5rem;
     }
 
-    .video {
-        display: none;
+    .container-video {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .video-wrapper {
+        flex: 1 1 45%;
     }
 }
 
