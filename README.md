@@ -9,6 +9,11 @@
 
 > **Um site tributo para Sharon den Adel**, vocalista da banda de metal sinfônico **Within Temptation**. Este site destaca sua carreira, música e inclui uma galeria de imagens visualmente atraente com funcionalidade de tela cheia! 🎶🔥
 
+## 📸 Captura de Tela
+
+![Sharon](https://github.com/user-attachments/assets/76aae17d-2d8d-44f1-bbf4-8f1e3d790f58)
+
+
 ## 🖼️ Funcionalidades
 
 - **Design responsivo**: Funciona perfeitamente em todos os dispositivos (mobile, tablet, desktop) 📱💻
